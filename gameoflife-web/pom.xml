@@ -23,6 +23,7 @@
 			<plugin>
 				<groupId>org.easyb</groupId>
 				<artifactId>maven-easyb-plugin</artifactId>
+				<version>1.4</version>
 				<executions>
 					<execution>
 						<phase>integration-test</phase>
