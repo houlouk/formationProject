@@ -1,5 +1,11 @@
 package com.wakaleo.gameoflife.domain;
 
+
+/**
+ * Class that represents cell
+ * @author Administrateur
+ *
+ */
 public enum Cell {
     LIVE_CELL("*"), DEAD_CELL(".");
 
