@@ -1,0 +1,13 @@
+<form class="form-inline"
+		>
+		<div class="form-group">
+			<table class="table borderless">
+					[[	<tr>
+						<td>#attName</td>
+						<td><input id="input#modelClass#attName" type="text" name="#modelName#attNamBeFirst" /> </td>
+					</tr> ]]
+			</table>
+
+			<button id="btnAddReel#modelClass" class="form-control" name="add" >Ajouter #modelName</button>
+		</div>
+</form>

@@ -1,0 +1,66 @@
+@import 'formulaire.css';
+
+h1 {
+  background-color: gray;
+  font-style: italic;
+  text-align: center;
+}
+
+.removeEtudiant {
+	border-style: none;
+	}
+
+
+
+a {
+
+  font-weight: bold;
+  color:gray;
+  /*margin:5px;*/
+  /*background-color: rgb(20%,100%,50%);*/
+}
+
+img {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display:normal;
+}
+
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+footer {
+  clear: both;
+  margin-bottom: 0;
+}
+
+section {
+  float: right;
+  width: 63%;
+  background-color: #EEEEEE;
+}
+
+aside {
+
+  float:left;
+  width: 30%;
+
+  background-color: red;
+}
+
+#banniere {
+  height: 100px;
+  width: 100%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBkX7ZtsvZsQnS5tcrrwQ54xbxG5iXMXlzYqqbrkR5yzS7qFkH");
+  background-repeat: round;
+}

@@ -1,0 +1,6 @@
+<form>
+
+[[<div><label>#attNamBeFirst :</label> <input type="text" id="#modelName#attNamBeFirst"/></div> ]]
+<input type="submit" value="valider #modelName"/>
+
+</form>

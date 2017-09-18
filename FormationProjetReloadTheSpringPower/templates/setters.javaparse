@@ -1,0 +1,2 @@
+#modelClass #modelName = new #modelClass();
+		[[#modelName.set#attNamBeFirst(#attName); ]]

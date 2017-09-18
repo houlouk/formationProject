@@ -1,0 +1,25 @@
+:valid input:not([type="submit"])
+{
+  border: solid lime;
+  font-weight: normal;
+
+}
+
+:invalid input:not([type="submit"])
+ {
+  border:solid red;
+  font-weight: bold;
+
+}
+
+:required input:not([type="submit"])
+{
+  background-color: yellow;
+}
+
+:optional input:not([type="submit"])
+ {
+  background-color: lightgray;
+}
+
+

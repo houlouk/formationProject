@@ -1,0 +1,88 @@
+package fr.m2i.jersey;
+
+import java.util.List;
+import javax.ws.rs.Consumes;
+
+import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
+import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
+import fr.acceis.jpa.jpa.Dao;
+import fr.acceis.jpa.jpa.#modelClassDao;
+import model.#modelClass;
+
+
+            
+
+@Path("/#modelNames")
+public class Service#modelClass {
+
+	private Dao<#modelClass, #modelIdType> dao#modelClass = new #modelClassDao();
+
+	@GET
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getAll#modelClasss() {
+
+		List<#modelClass> #modelNames = dao#modelClass.getAll();
+
+		return Response.ok().entity(#modelNames).build();
+
+	}
+	
+	
+    @GET
+    @Path("{#modelIdName}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response get#modelClass(#paramsDelete) {
+
+        #modelClass #modelName= dao#modelClass.get(#modelIdName);
+
+        return Response.ok().entity(#modelName).build();
+
+    }
+
+	@POST
+	@Path("add")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response add#modelClass(#modelClass #modelName) {
+
+	
+
+		dao#modelClass.add(#modelName);
+
+		return Response.ok().build();
+
+	}
+
+	@PUT
+	@Path("{#modelIdName}/update")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public Response update#modelClass(#paramsDelete,#modelClass #modelName) {
+
+				
+		dao#modelClass.update(#modelIdName,#modelName);
+
+		return Response.ok().build();
+
+	}
+
+	@DELETE
+	@Path("{#modelIdName}/delete")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response delete#modelClass(#paramsDelete) {
+
+
+		dao#modelClass.delete(#modelIdName);
+
+		return Response.ok().build();
+
+	}
+
+}

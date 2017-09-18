@@ -1,0 +1,145 @@
+$(document).ready(function() {
+	let nbElems=0;
+	function removeEvents() {
+		let j=0;
+		while(j<nbElems){
+			console.log(j);
+		$(document).off('click',`#remove#modelClass#modelIdName${j}`);
+			j++;
+		}
+	}
+	$('##modelNameLink').on('click', function(e) {
+		e.preventDefault();
+		$("#list").find("*").off();
+		$('#headerTitle').html("#modelClass");
+		
+		removeEvents();
+		$('#addForm').empty();
+		
+
+
+		console.log("test");
+
+		$.ajax({
+			url : 'http://localhost:8080/FormationProjetReloadTheSpringPower/formation/#modelNames',
+			data : [],
+			type : 'GET',
+			cache : false,
+			dataType : 'json',
+			success : function(data) {
+				let html = "";
+				let i=0;
+				html+=`<table class="table table-bordered">  <thead>
+				[[ <th> #attNamBeFirst </th> ]]					
+
+			 </thead><tbody id="tbody">
+										`
+				for (let #modelName of data) {
+					nbElems=data.length;
+
+					html += `
+						 <tr>
+						[[ <td>${#modelName.#attName}</td> ]]
+			    	
+			    		 <td class="remove#modelClass">
+ 			    		   <form>
+					 <button type="button" id="remove#modelClass#modelIdName${i}" name="remove">Supprimer</button>
+						 </form>
+		 
+ 			    		  </td>
+			    		  
+			    		
+			    		  
+			    		 </tr>
+			    		
+			    		 
+						
+			    		 
+			    		 ` 
+						
+						$(document).on('click',`#remove#modelClass#modelIdName${i}`,
+							function(e) {
+								e.preventDefault();
+								console.log("test");
+
+								$.ajax({
+									url : `http://localhost:8080/FormationProjetReloadTheSpringPower/formation/#modelNames/${#modelName.#modelIdName}/delete`,
+									data : [],
+									type : 'DELETE',
+									cache : false,
+									dataType : 'text',
+									success : function(data) {
+										 $('##modelNameLink').trigger('click');
+									
+							
+						}
+								}
+								
+								);
+								}
+						
+				);
+						i++;
+				}
+				
+				html+=` </tbody>
+			    		 </table>
+			    		`
+				$('#list').html(html);
+				$('#btnAddDiv').html(`<button type="button" id=btnAdd#modelClass> Ajouter #modelClass </button>`);
+
+			
+
+
+			}
+		});
+
+	}
+	);
+	
+	
+
+	class #modelClass {
+		  constructor([[ #attName , ]]) {
+			 [[ this.#attName =  #attName; ]]	  
+			  
+		  }
+		} 
+	
+	$(document).on('click','#btnAddReel#modelClass', function(e) {
+		e.preventDefault();
+		let #modelName = new #modelClass([[$('#input#modelClass#attName').val(),]]);
+		
+		$.ajax({
+			  headers: { 
+			        'Accept': 'application/json',
+			        'Content-Type': 'application/json' 
+			    },
+			url : 'http://localhost:8080/FormationProjetReloadTheSpringPower/formation/#modelNames/add',
+			data : JSON.stringify(#modelName),
+			type : 'POST',
+			cache : false,
+			dataType : 'json',
+			success : function(data) {			
+				 $('##modelNameLink').trigger('click');
+
+			
+			}
+		});
+		
+
+
+	});
+		
+
+	
+	
+	$(document).on('click','#btnAdd#modelClass', function(e) {
+		
+		$('#addForm').load("jsp/#modelNameFormular.html")
+
+
+
+}
+
+);

@@ -1,0 +1,3 @@
+StringBuilder builder = new StringBuilder("#modelClasss(");
+		[[builder.append("#attName : ");
+		builder.append(#attName); ]]

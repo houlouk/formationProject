@@ -1,0 +1,83 @@
+$(document).ready(function() {
+
+	$('#modelNameLink').on('click', function(e) {
+		e.preventDefault();
+		console.log("test");
+
+		$.ajax({
+			url : 'http://localhost:8080/FormationProjetReloadTheSpringPower/rest/etudiants',
+			data : [],
+			type : 'GET',
+			cache : false,
+			dataType : 'json',
+			success : function(data) {
+				let html = "";
+				for (let etud of data) {
+					html += ` <tr>
+					
+						 <thead>
+						 #fieldHeader
+						 </thead>
+						 
+						 <tbody>
+						 <tr>
+			    		 #fieldBody
+			    		 <td class="remove#modelClass">
+ 			    		   <form method="post" action="/rest/#modelNames/remove" >
+		 			<input type="hidden" name="#idName" id="remove"/>
+					 <input type="submit" name="remove" value="Supprimer"/>
+						 </form>
+		 
+ 			    		  </td>
+			    		  
+			    		
+			    		  
+			    		 </tr>
+			    		 </tbody>
+			    		 
+						
+			    		 
+			    		 ` }
+
+			
+
+
+			}
+		});
+
+	}
+	);
+
+	class #modelClass {
+		  constructor(#paramsJSClass) {
+		   #setterJSClass
+		  }
+		}
+	
+	$('#btnAddReel#modelClass').on('click', function() {
+		let #modelName = new #modelClass(#paramsInitSet))
+		
+		$.ajax({
+			  headers: { 
+			        'Accept': 'application/json',
+			        'Content-Type': 'application/json' 
+			    },
+			url : 'http://localhost:8080/FormationProjetLeRetour/rest/#modelNames/add',
+			data : JSON.stringify(#modelName),
+			type : 'POST',
+			cache : false,
+			dataType : 'json',
+			success : function(data) {			
+
+
+			}
+		});
+		
+
+
+	});
+
+
+}
+
+);

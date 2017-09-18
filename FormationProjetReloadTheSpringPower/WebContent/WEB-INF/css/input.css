@@ -1,0 +1,10 @@
+#tranportId {
+	display:none;
+}
+
+#transportNon:focus ~ #transportId {
+  display: none;
+}
+#transportOui:focus ~ #transportId {
+  display: block;
+}

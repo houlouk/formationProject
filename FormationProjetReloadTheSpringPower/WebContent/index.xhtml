@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+	<ui:composition template="/WEB-INF/templates/template.xhtml">
+	
+	<ui:define name="title">#{bundle['application.index.title']}</ui:define>
+		<ui:define name="headerTitle"></ui:define>
+	
+	<ui:define name="otherScripts">
+		<script type="text/javascript" src="/FormationProjetReloadTheSpringPower/Scripts/etudiant.js"></script>
+			<script type="text/javascript" src="/FormationProjetReloadTheSpringPower/Scripts/cursus.js"></script>
+				<script type="text/javascript" src="/FormationProjetReloadTheSpringPower/Scripts/salle.js"></script>
+					<script type="text/javascript" src="/FormationProjetReloadTheSpringPower/Scripts/professeur.js"></script>
+	
+	</ui:define>
+	
+	<ui:define name="headerTitle">
+	
+		<div id="headerTitle"></div>
+	
+	</ui:define>
+		<ui:define name="otherStyles">
+	
+	 		<link href="#{request.contextPath}/Styles/accueil.css" rel="stylesheet"></link>
+	</ui:define>
+	<ui:define name="content">
+	
+	
+	<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="list-inline navbar-nav mr-auto">
+    
+     <li class="list-inline-item nav-item">
+        <a class="nav-link" title="Retour à l'accueil" href="/FormationProjetReloadTheSpringPower">#{bundle['applications.master.accueil']}</a>
+      </li>
+      <li class="list-inline-item nav-item">
+        <a id="professeurLink" class="nav-link"  title="Lister les professeurs" href="#">#{bundle['application.master.professeurs']}</a>
+      </li>
+    
+      <li class="list-inline-item nav-item">
+        <a id="etudiantLink" class="nav-link" title="Lister les etudiants" href="#">#{bundle['application.master.etudiants']}</a>
+      </li>
+      
+       <li class="list-inline-item nav-item">
+        <a id="salleLink" class="nav-link" title="Lister les salles" href="#">#{bundle['application.master.salles']}</a>
+      </li>
+      
+       <li class="list-inline-item nav-item">
+        <a id="cursusLink" class="nav-link" title="Lister les cursus" href="#">#{bundle['application.master.cursus']}</a>
+      </li>
+      
+          
+      
+    </ul>
+
+  </div>
+</nav>
+
+ <h1 id="title"></h1>
+ 
+ <table id="list" class="table table-bordered">
+ 
+
+</table>
+
+<div id="btnAddDiv"></div>
+
+<div id="addForm">
+	
+</div>
+
+<div id="error"></div>
+	
+	</ui:define>
+<!-- <head>  -->
+
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> -->
+
+ <!-- Latest compiled and minified JavaScript --> 
+<!--     <link rel="stylesheet" type="text/css" href="/FormationProjetLeRetour/Styles/formation.css" media="screen" /> -->
+<!--     <link rel="stylesheet" type="text/css" href="/FormationProjetLeRetour/Styles/accueil.css" media="screen" /> -->
+
+<!-- </head> -->
+<!-- <body> -->
+
+<!-- </body> -->
+ </ui:composition> 
+</html>
