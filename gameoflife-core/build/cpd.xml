@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="MacRoman"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <pmd-cpd>
 <duplication lines="6" tokens="156">
 <file line="52" path="/Users/johnsmart/Projects/Demos/hudson-demo/gameoflife/gameoflife-core/src/test/java/com/wakaleo/gameoflife/domain/WhenYouPrintAGrid.java"/>
